@@ -10,7 +10,7 @@ A simple animated DNA strand created using **HTML & CSS**. This project demonstr
 
 ## 📸 Preview
 
-![DNA Strand Animation](https://your-image-link-here) 
+![DNA Strand](https://github.com/Hifza-Khalid/dna-strand-visualization/blob/main/DNA_visualize.JPG) 
 
 ## 🚀 How to Use
 
