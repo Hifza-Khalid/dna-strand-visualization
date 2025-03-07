@@ -1,0 +1,91 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #292929; /* 🎨 Dark background for better contrast */
+    padding-top: 50px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.strain {
+    width: 155px;
+    height: 1px;
+    background-color: #dbdbdb; /* 🧬 DNA strand color */
+    position: relative;
+    margin: 0px auto;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    animation-name: rotate-strain;
+    animation-duration: 1.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+/* 🟢 Left Circle (Nucleotide Base) */
+.strain:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #13b6e2; /* 🔵 Blue Nucleotide */
+    left: 0;
+    margin-top: -9px;
+    margin-left: -9px;
+    animation-name: strain-size-left;
+    animation-duration: 1.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+/* 🔴 Right Circle (Nucleotide Base) */
+.strain:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #13b6e2; /* 🔵 Blue Nucleotide */
+    right: 0;
+    margin-top: -9px;
+    margin-right: -9px;
+    animation-name: strain-size-right;
+    animation-duration: 1.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* 🔄 DNA Strand Rotation */
+@keyframes rotate-strain {
+    0% { width: 155px; }
+    25% { width: 0; }
+    50% { width: 155px; }
+    75% { width: 0; }
+    100% { width: 155px; }
+}
+
+/* 🧬 Left Nucleotide Animation */
+@keyframes strain-size-left {
+    0% { transform: scale(1) translateX(0px); }
+    25% { transform: scale(0.5); }
+    50% { transform: scale(1) translateX(155px); }
+    75% { transform: scale(1.5); }
+    100% { transform: scale(1) translateX(0px); }
+}
+
+/* 🧬 Right Nucleotide Animation */
+@keyframes strain-size-right {
+    0% { transform: scale(1) translateX(0px); }
+    25% { transform: scale(1.5); }
+    50% { transform: scale(1) translateX(-155px); }
+    75% { transform: scale(0.5); }
+    100% { transform: scale(1) translateX(0px); }
+}
